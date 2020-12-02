@@ -29,16 +29,16 @@ public class Serie {
     @Id
     @GeneratedValue
     @Column(name="Serie_id")
-    private Long SerieId;
+    private Integer SerieId;
     
     @Column(name="Serie_nombre")
     private String SerieNombre;
        
     @Column(name="Serie_Temp")
-    private Long SerieTemp;
+    private Integer SerieTemp;
     
     @Column(name="Serie_Cap")
-    private String SerieCap;
+    private Integer SerieCap;
     
 
     @Column(name="contenido_id")
@@ -46,11 +46,11 @@ public class Serie {
 //    @JoinColumn(name = "exp_id")
     Long ContenidoId;
 
-    public Long getSerieId() {
+    public Integer getSerieId() {
         return SerieId;
     }
 
-    public void setSerieId(Long SerieId) {
+    public void setSerieId(Integer SerieId) {
         this.SerieId = SerieId;
     }
 
@@ -62,19 +62,19 @@ public class Serie {
         this.SerieNombre = SerieNombre;
     }
 
-    public Long getSerieTemp() {
+    public Integer getSerieTemp() {
         return SerieTemp;
     }
 
-    public void setSerieTemp(Long SerieTemp) {
+    public void setSerieTemp(Integer SerieTemp) {
         this.SerieTemp = SerieTemp;
     }
 
-    public String getSerieCap() {
+    public Integer getSerieCap() {
         return SerieCap;
     }
 
-    public void setSerieCap(String SerieCap) {
+    public void setSerieCap(Integer SerieCap) {
         this.SerieCap = SerieCap;
     }
 

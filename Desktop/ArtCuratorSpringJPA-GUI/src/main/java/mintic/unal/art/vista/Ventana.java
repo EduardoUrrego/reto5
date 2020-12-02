@@ -295,7 +295,7 @@ public class Ventana extends javax.swing.JFrame {
             Serie serie = optionalSerie.get();
             tfNombre.setText(serie.getSerieNombre());
             tfCosto.setText(serie.getSerieTemp().toString());
-            tfTipo.setText(serie.getSerieCap());
+            tfTipo.setText(serie.getSerieCap().toString());
             
             
             lbNotificaciones.setText(
@@ -313,8 +313,8 @@ public class Ventana extends javax.swing.JFrame {
     private Serie obtenerDatosDeFormulario(){
         Serie serie = new Serie();
         serie.setSerieNombre(tfNombre.getText());
-        serie.setSerieTemp(Long.parseLong(tfCosto.getText()));
-        serie.setSerieCap(tfTipo.getText());
+        serie.setSerieTemp(Integer.parseInt(tfCosto.getText()));
+        serie.setSerieCap(Integer.parseInt(tfTipo.getText()));
         return serie;
     }
     
@@ -326,14 +326,14 @@ public class Ventana extends javax.swing.JFrame {
 //        a = a + "3";
 //        a = a + "4";
         
-        Long id;
+        Integer id;
         StringBuffer respuesta = new StringBuffer();
         if(tfId.getText().equals("")){
             id = null;
             respuesta.append("Se creó la Serie: ");
         }
         else{
-            id = Long.parseLong(tfId.getText());
+            id = Integer.parseInt(tfId.getText());
             respuesta.append("Se actualizó la Serie: ");
         }
          
