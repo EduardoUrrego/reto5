@@ -289,7 +289,7 @@ public class Ventana extends javax.swing.JFrame {
     
     private void buscarPorId() {
         
-        Long id = Long.parseLong(tfId.getText());
+        Integer id = Integer.parseInt(tfId.getText());
         Optional<Serie> optionalSerie = serieRepositorio.findById(id);
         if(optionalSerie.isPresent()){
             Serie serie = optionalSerie.get();
@@ -353,7 +353,7 @@ public class Ventana extends javax.swing.JFrame {
     }
    
     public void eliminar(){
-        Long id = Long.parseLong(tfId.getText());
+        Integer id = Integer.parseInt(tfId.getText());
         
         try{
             serieRepositorio.deleteById(id);
