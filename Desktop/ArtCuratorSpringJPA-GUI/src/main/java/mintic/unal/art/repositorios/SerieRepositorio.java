@@ -15,7 +15,7 @@ import org.springframework.stereotype.Repository;
  * @author joag
  */
 @Repository
-public interface SerieRepositorio extends JpaRepository<Serie, Int>{
+public interface SerieRepositorio extends JpaRepository<Serie, Integer>{
 
    
     
